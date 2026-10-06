@@ -1,0 +1,13 @@
+{
+  "name": "smart-inventory-system",
+  "version": "1.0.0",
+  "description": "Smart Inventory & Sales Management System (MERN Stack)",
+  "scripts": {
+    "install-backend": "npm install --prefix backend",
+    "install-frontend": "npm install --prefix frontend",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "seed": "npm run seed --prefix backend"
+  }
+}

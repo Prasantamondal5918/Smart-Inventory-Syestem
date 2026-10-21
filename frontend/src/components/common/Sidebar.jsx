@@ -17,6 +17,7 @@ import {
   User,
   X,
   Sparkles,
+  Bot,
 } from 'lucide-react';
 
 const Sidebar = ({ isMobileOpen, onCloseMobile }) => {
@@ -36,6 +37,7 @@ const Sidebar = ({ isMobileOpen, onCloseMobile }) => {
     { label: 'Suppliers', path: '/suppliers', icon: Truck },
     { label: 'Branches', path: '/branches', icon: GitBranch },
     { label: 'Activity Logs', path: '/activity-logs', icon: History },
+    { label: 'AI Assistant', path: '/ai-assistant', icon: Bot },
     { label: 'Notifications', path: '/notifications', icon: Bell },
     { label: 'Settings', path: '/settings', icon: Settings },
   ];
@@ -46,6 +48,7 @@ const Sidebar = ({ isMobileOpen, onCloseMobile }) => {
     { label: 'Inventory', path: '/stock', icon: Boxes },
     { label: 'POS Terminal', path: '/pos', icon: ShoppingCart },
     { label: 'Sales History', path: '/sales', icon: Receipt },
+    { label: 'AI Assistant', path: '/ai-assistant', icon: Bot },
     { label: 'Notifications', path: '/notifications', icon: Bell },
     { label: 'Profile', path: '/profile', icon: User },
   ];

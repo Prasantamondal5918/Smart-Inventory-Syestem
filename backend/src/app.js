@@ -17,6 +17,7 @@ const notificationRoutes = require('./routes/notification.routes');
 const activityRoutes = require('./routes/activity.routes');
 const searchRoutes = require('./routes/search.routes');
 const customerRoutes = require('./routes/customer.routes');
+const aiRoutes = require('./routes/ai.routes');
 
 const app = express();
 
@@ -55,6 +56,7 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/activity-logs', activityRoutes);
 app.use('/api/search', searchRoutes);
 app.use('/api/customers', customerRoutes);
+app.use('/api/ai', aiRoutes);
 
 // Catch-all for undefined routes
 app.use('*', (req, res) => {

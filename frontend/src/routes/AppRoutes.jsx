@@ -34,6 +34,7 @@ import Settings from '../pages/Settings';
 import Profile from '../pages/Profile';
 import SearchResults from '../pages/SearchResults';
 import NotFound from '../pages/NotFound';
+import AIChatbot from '../pages/AIChatbot';
 
 const AppRoutes = () => {
   return (
@@ -90,6 +91,7 @@ const AppRoutes = () => {
           <Route path="/settings" element={<Settings />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/search" element={<SearchResults />} />
+          <Route path="/ai-assistant" element={<AIChatbot />} />
 
           {/* Fallback */}
           <Route path="*" element={<NotFound />} />

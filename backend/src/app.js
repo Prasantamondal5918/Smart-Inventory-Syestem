@@ -22,8 +22,21 @@ const aiRoutes = require('./routes/ai.routes');
 const app = express();
 
 // Middlewares
+// CLIENT_URL may contain a comma-separated list of allowed frontend origins.
+// Keep the deployed Netlify site available even when Render has not yet been
+// configured with the CLIENT_URL environment variable.
+const allowedOrigins = new Set([
+  'http://localhost:5173',
+  'https://serene-malasada-889556.netlify.app',
+  ...(process.env.CLIENT_URL || '').split(',').map((origin) => origin.trim()).filter(Boolean),
+]);
+
 app.use(cors({
-  origin: process.env.CLIENT_URL ,
+  origin(origin, callback) {
+    // Requests from tools and same-origin clients may not include an Origin.
+    if (!origin || allowedOrigins.has(origin)) return callback(null, true);
+    return callback(new Error(`Origin ${origin} is not allowed by CORS`));
+  },
   credentials: true,
 }));
 
